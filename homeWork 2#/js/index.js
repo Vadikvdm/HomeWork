@@ -3,14 +3,14 @@ let meaningM;
 
 do {
     meaningN = +prompt("Введите значение N", 1)
-} while (!Number (meaningN > 0))
+} while (!Number.isInteger(meaningN || meaningN > 0));
 
 alert(`Является ли число целым? = ${Number.isInteger(meaningN)}`);
 console.log(meaningN);
 
 do {
     meaningM = +prompt("Введите значение M", 10)
-} while (!Number (meaningM > meaningN))
+} while (!Number.isInteger(meaningM) || meaningM < meaningN);
 
 alert(`Является ли число целым? = ${Number.isInteger(meaningM)}`);
 console.log(meaningM);
